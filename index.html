@@ -4,12 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="scss/style.css">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 </head>
 <body>
-    
+    <main>
+        <section class="swiper-wrapper">
+            <article class="swiper-slide">1</article>
+            <article class="swiper-slide">2</article>
+            <article class="swiper-slide">3</article>
+            <article class="swiper-slide">4</article>
+            <article class="swiper-slide">5</article>
+        </section>
+    </main>
+
+    <script>
+        //기본 스와이퍼 연결법
+        const swiper = new Swiper("main",{
+            speed: 500, //스와이프 시 패널이 넘어가는 속도
+            loop: true, //스와이프를 순환
+            direction: "horizontal", //horizontal 가로 , vertical 세로 스와이프
+            grabCursor: true, //커서 주먹쥐기 효과
+            slidesPerView: "auto", //한 화면에 몇개씩 보이게 할것인지 , "auto":100%, 특정 크기를 지정
+            spaceBetween: 30, //패널사이의 간격 (px)
+            centeredSlides: true,
+        });
+    </script>
 </body>
 </html>
